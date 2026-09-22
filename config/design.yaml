@@ -13,11 +13,11 @@
 # stack. Distinctiveness here comes from COLOUR, not from type.
 #
 # WHY THESE KEYS AND NOT OTHERS
-#   `theme.colors` accepts any kebab-case key, but only the keys in
+#   `design.colors` accepts any kebab-case key, but only the keys in
 #   `COLOR_TO_SV_TOKEN` (src/infrastructure/css/theme/theme-generators.ts) emit
 #   the `--sv-*` platform tokens as well as `--color-*`. Those are the ones every
 #   prestyled island already consumes, so declaring them repaints the two
-#   `data-table` islands on /activity — their headers, row borders, filter chips
+#   `table` islands on /activity — their headers, row borders, filter chips
 #   and pagination — with no class changes anywhere in this config. A non-role
 #   key such as `brand-accent` emits `--color-*` only and does nothing until
 #   something references it, which is how a template can declare a whole palette
@@ -61,7 +61,7 @@ colors:
   warning: '#b45309'
   error: '#be123c'
 
-# Rendered only when the app declares `theme.colorScheme` or ships a
+# Rendered only when the app declares `design.colorScheme` or ships a
 # `theme-toggle`; the stylesheet carries it either way.
 #
 # `primary-foreground` is declared HERE and not left to derive. The `#ffffff`
@@ -87,7 +87,7 @@ darkColors:
   warning: '#fbbf24'
   error: '#fb7185'
 
-borderRadius:
+radius:
   sm: 0.25rem
   md: 0.5rem
   lg: 0.75rem
